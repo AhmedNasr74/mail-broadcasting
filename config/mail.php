@@ -34,6 +34,7 @@ return [
     */
 
     'mailers' => [
+
         'mailjet' => [
             'transport' => 'mailjet',
         ],
@@ -96,8 +97,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'ahmednasr2589@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Ahmed Nasr'),
     ],
 
     /*

@@ -130,7 +130,7 @@
                 </tr>
                 <tr style="text-align: center">
                     <td>
-                        <p style="font-size: 14px;"><b>Hello ,</b></p>
+                        <p style="font-size: 14px;"><b>Hello Every Body,</b></p>
                         <p style="font-size: 14px;">
                             This is Ahmed's Nasr Task Form {{ config('app.name') }}
                         </p>

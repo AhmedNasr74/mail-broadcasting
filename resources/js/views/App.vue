@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="wrap-input2 validate-input" data-validate="Message is required">
-                        <textarea class="input2" name="message" v-model="form.message"></textarea>
+                        <textarea class="input2" v-model="form.message"></textarea>
                         <span class="focus-input2" data-placeholder="MESSAGE"></span>
                         <span class="error-message" v-if="errors.message">{{ errors.message }}</span>
                     </div>
@@ -101,10 +101,10 @@ export default {
             if (this.validForm()) {
                 axios.post('/boradcasting/send', this.form).then(res => {
                     Swal.fire("Successful", res.data.message, 'success')
-                    // this.resetForm()
+                    this.resetForm()
                 }).catch(error => {
                     Swal.fire("Error", error.response.data.error, 'error')
-                    // this.resetForm()
+                    this.resetForm()
                 })
             }
         },
@@ -139,7 +139,7 @@ export default {
     border-radius: 6px;
     top: 0;
     position: absolute;
-    right: 0%;
+    right: 0;
 }
 
 .error-message {

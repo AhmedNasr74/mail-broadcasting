@@ -12,12 +12,10 @@ class NewsLetterMail extends Mailable
     {
         $this->subject = $subject;
         $this->content = $content;
-        dd($this->mailer);
     }
 
     public function build()
     {
-
-        return $this->view('emails.news-letter' );
+        return $this->view('emails.news-letter');
     }
 }
