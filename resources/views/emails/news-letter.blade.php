@@ -132,7 +132,7 @@
                     <td>
                         <p style="font-size: 14px;"><b>Hello Every Body,</b></p>
                         <p style="font-size: 14px;">
-                            This is Ahmed's Nasr Task Form {{ config('app.name') }}
+                            This is Ahmed's Nasr Task For {{ config('app.name') }}
                         </p>
                         <p style="font-size: 14px;">
                             {{ $content }}

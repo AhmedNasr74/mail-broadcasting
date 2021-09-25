@@ -1,12 +1,21 @@
-# Bwader Project
-#### This Project helps event organizers to organize there events and get sponsorships Under supervision of GSA
+# Indigan Task
+#### Email Broadcasting Service Form Multiple Recipients
 
+## Used Technologies
+<p align="center">
+<a href="https://laravel.com">
+<img src="https://laravel.com/img/logotype.min.svg" alt="Laravel Framework"></a>
 
-## Setup steps
-    composer install
-    php artisan setup
+<a href="https://laravel.com">
+<img src="https://vuejs.org/images/logo.svg" width="50" alt="Vue Js"></a>
+</p>
 
-## Testing
-    php artisan test
-## Testing specific class
-     php artisan test --filter class_name
+## How To use
+
+- [Go To http://indigan.tripvisito.com/](http://indigan.tripvisito.com/).
+- Enter Your Mail Subject
+- Enter Your Recipients Emails
+- Enter Your Custom Message Content
+- Submit Form
+
+Thanks.
