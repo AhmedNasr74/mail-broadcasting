@@ -36,11 +36,11 @@
                         </div>
                     </div>
 
-                    <div class="wrap-input2 validate-input" data-validate="Message is required">
-                        <textarea class="input2" v-model="form.message"></textarea>
-                        <span class="focus-input2" data-placeholder="MESSAGE"></span>
+                    <div class="wrap-input2 validate-input" style="margin-top: 25px" data-validate="Message is required">
+                        <quill-editor :options="wysiwygConfig" v-model="form.message" id="social_history" name="message" />
                         <span class="error-message" v-if="errors.message">{{ errors.message }}</span>
                     </div>
+
 
                     <div class="container-contact2-form-btn">
                         <div class="wrap-contact2-form-btn" v-if="!sending">
@@ -70,6 +70,14 @@ export default {
     name: "App",
     data() {
         return {
+            wysiwygConfig: {
+                placeholder: 'Type a text here',
+                modules: {
+                    toolbar: {
+                        container: [[{ header: [1, 2, 3, 4, 5, 6, false] }], ['bold', 'italic', 'underline', 'strike'], [{ list: 'ordered' }, { list: 'bullet' }], [{ color: [] }, { background: [] }], [{ align: [] }], ['link', 'image'], ['clean']]
+                    }
+                }
+            },
             sending: false,
             errors: {},
             form: {
@@ -97,8 +105,8 @@ export default {
             return Object.keys(this.errors).length == 0
         },
         handleSubmit() {
-            this.sending = true
             if (this.validForm()) {
+                this.sending = true
                 axios.post('/boradcasting/send', this.form).then(res => {
                     Swal.fire("Successful", res.data.message, 'success')
                     this.resetForm()
@@ -128,7 +136,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 .btn-remove {
     float: right;
     background: red;
@@ -146,5 +154,7 @@ export default {
     color: red;
     position: absolute;
 }
-
+.ql-toolbar.ql-snow + .ql-container.ql-snow{
+    min-height: 200px;
+}
 </style>

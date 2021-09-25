@@ -135,7 +135,7 @@
                             This is Ahmed's Nasr Task For {{ config('app.name') }}
                         </p>
                         <p style="font-size: 14px;">
-                            {{ $content }}
+                            {!! $content??'' !!}
                         </p>
                     </td>
                 </tr>
