@@ -18,4 +18,13 @@
 - Enter Your Custom Message Content
 - Submit Form
 
+## Files To Browse
+
+- routes/web.php
+- resources/js/*
+- resources/views/emails/news-letter.blade.php
+- resources/views/welcome.blade.php
+- app/Http/Controllers/MailingController.php
+- app/Http/Requests/MailBroadCastingRequest
+
 Thanks.
